@@ -1,0 +1,110 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.navbar.hidden {
+    top : -100px;
+}
+
+.navbar.active {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+    .nav-link.active {
+        font-weight: bold; /* Menebalkan teks untuk item aktif */
+        color: #000000; /* Warna teks item aktif */
+        border-bottom: 2px solid #000000; /* Garis bawah dengan warna yang sama dengan teks */
+        padding-bottom: 5px; /* Spasi antara teks dan garis bawah */
+    }
+    
+
+
+/* banner */
+.banner {
+    position: relative; /* Pastikan banner memiliki posisi relatif */
+    z-index: 1; /* Atur z-index lebih rendah dari list post */
+}
+
+.banner-image img {
+    
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    object-fit: cover; /* agar gambar tetap proporsional */
+    width: 100%;
+    height: 500px;
+}
+
+.banner-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+}
+
+/* list post */
+/* Container */
+.container {
+    display: grid;
+    place-items: center; /* Memusatkan grid card secara horizontal dan vertikal */
+    min-height: 100vh; /* Pastikan container memiliki tinggi minimum layar */
+
+    width: 100%;
+    /* max-width: 1200px; Maksimal lebar container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+
+
+/* Mengatur grid card */
+.post-list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Empat kolom per baris */
+    gap: 2rem; /* Jarak antar card */
+    width: 100%;
+    /* max-width: 1200px; Atur lebar maksimum grid */
+    justify-content: center;
+    margin-left: 95px;
+}
+
+/* Card styling */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    width: 100%; /* Pastikan card tidak lebih besar dari grid item */
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: 150px; /* Tinggi gambar card */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek hover untuk card */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Pagination styling */
+.pagination .page-item.active .page-link {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+}
+
